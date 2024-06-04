@@ -11,9 +11,9 @@ Aplicația este realizată în limbajul de programare C#, împreună cu framewor
 <b>Funcționalități planificate</b>
 
 Iterația 1:
-- [ ] Login/Logout system
-- [ ] Creare bază de date agenți și produse
-- [ ] Operații CRUD unde este necesar (fără interfață grafică)
+- [X] Login/Logout system
+- [X] Creare bază de date agenți și produse
+- [X] Operații CRUD unde este necesar (fără interfață grafică)
 
 Iterația 2:
 - [ ] Vizualizare produse într-un tabel

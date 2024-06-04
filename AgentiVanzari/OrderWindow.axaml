@@ -1,0 +1,28 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="640"
+        Height="480"
+        MinWidth="640"
+        MinHeight="480"
+        MaxWidth="640"
+        MaxHeight="480"
+        x:Class="AgentiVanzari.OrderWindow"
+        Title="Order">
+        
+        <Grid>
+                <Grid.Background>
+                        <ImageBrush Source="Assets/images/background.jpeg" Stretch="Fill"/>
+                </Grid.Background>
+        
+                <StackPanel Spacing="50" Background="Transparent">
+                        <TextBlock Text="Comanda" Foreground="White" Background="Transparent" FontFamily="Arial" FontSize="30"/>
+                        <TextBox Text="Nume" TextAlignment="Center" BorderBrush="White" Foreground="White" Background="Transparent" FontFamily="Arial" FontSize="30"/>
+                        <TextBox Text="Cantitate" TextAlignment="Center" BorderBrush="White" Foreground="White" Background="Transparent" FontFamily="Arial" FontSize="30"/>
+                        <Button Content="Comanda" Width="200" Height="50" HorizontalAlignment="Center" BorderBrush="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Background="Transparent"/>
+                </StackPanel>
+        </Grid>
+        
+</Window>

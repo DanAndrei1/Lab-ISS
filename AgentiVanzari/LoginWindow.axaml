@@ -1,0 +1,32 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="clr-namespace:AgentiVanzari"
+        x:DataType="vm:LoginViewModel"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AgentiVanzari.LoginWindow"
+        Title="Login"
+        Width="640"
+        Height="480"
+        MinWidth="640"
+        MinHeight="480"
+        MaxWidth="640"
+        MaxHeight="480">
+    
+    <Grid>
+        <Grid.Background>
+                <ImageBrush Source="Assets/images/background.jpeg" Stretch="Fill"/>
+        </Grid.Background>
+        
+            <StackPanel Spacing="50" Background="Transparent">
+                <TextBlock Text=""/>
+                <TextBlock Text="Login" TextAlignment="Center" Foreground="White" Background="Transparent" FontFamily="Arial" FontSize="30"/>
+                <TextBox Text="Username" TextAlignment="Center" Foreground="LightGray" Background="Transparent" BorderBrush="White" FontFamily="Arial" Width="200" Height="50"/>
+                <TextBox Text="Password" TextAlignment="Center" Foreground="LightGray" Background="Transparent" BorderBrush="White" FontFamily="Arial" Width="200" Height="50"/>
+                <Button Content="Login" Width="200" Height="50" HorizontalAlignment="Center" BorderBrush="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Background="Transparent" Command="{Binding LoginCommand}"/>
+                <TextBlock Text="ErrorMessage" Foreground="Red"/>
+            </StackPanel>
+    </Grid>
+    
+</Window>
