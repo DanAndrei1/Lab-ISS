@@ -1,4 +1,5 @@
-﻿using Avalonia.Controls;
+﻿using AgentiVanzari.ViewModels;
+using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
 namespace AgentiVanzari
@@ -7,7 +8,7 @@ namespace AgentiVanzari
     {
         public LoginWindow()
         {
-            DataContext = new LoginViewModel(this);
+            DataContext = new LoginViewModel();
             InitializeComponent();
         }
 

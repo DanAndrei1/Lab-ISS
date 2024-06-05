@@ -34,6 +34,19 @@ public class Service
             _ = _repositoryProducts.Update(product);
     }
     
+    public void UpdateProduct(int id, string newProductName, int newQuantity)
+    {
+        var product = _repositoryProducts.GetById(id).Result;
+        product.Name = newProductName;
+        product.Stock = newQuantity;
+        _ = _repositoryProducts.Update(product);
+    }
+    
+    public void DeleteProduct(int id)
+    {
+        _ = _repositoryProducts.Delete(id);
+    }
+    
     public void DeleteProductsWithQuantityLessThan(int quantity)
     {
         var products = _repositoryProducts.GetAll().Result;

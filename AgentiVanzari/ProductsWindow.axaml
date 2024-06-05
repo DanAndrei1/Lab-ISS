@@ -9,6 +9,8 @@
         MinHeight="480"
         MaxWidth="640"
         MaxHeight="480"
+        xmlns:viewModels="clr-namespace:AgentiVanzari.ViewModels"
+        x:DataType="viewModels:ViewProductsModel"
         x:Class="AgentiVanzari.ProductsWindow"
         Title="Produse">
         
@@ -18,11 +20,15 @@
         </Grid.Background>
         
         <StackPanel Spacing="50" Background="Transparent">
-            <TextBlock Text=""/>
-            <TextBlock Text="Login" TextAlignment="Center" Foreground="White" Background="Transparent" FontFamily="Arial" FontSize="30"/>
-            <TextBox Text="Username" TextAlignment="Center" Foreground="LightGray" Background="Transparent" BorderBrush="White" FontFamily="Arial" Width="200" Height="50"/>
-            <TextBox Text="Password" TextAlignment="Center" Foreground="LightGray" Background="Transparent" BorderBrush="White" FontFamily="Arial" Width="200" Height="50"/>
-            <Button Content="Login" Width="200" Height="50" HorizontalAlignment="Center" BorderBrush="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Background="Transparent"/>
+            <TextBlock/>
+            <TextBlock Text="Products" TextAlignment="Center" Foreground="White" Background="Transparent" FontFamily="Arial" FontSize="30"/>
+            <DataGrid ItemsSource="{Binding Products}" AutoGenerateColumns="True" FontFamily="Arial" Background="Gray" Foreground="White" BorderBrush="White" BorderThickness="5">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nume" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Stoc" Binding="{Binding Stock}" />
+            </DataGrid.Columns>
+            </DataGrid>
+            <Button Command="{Binding BackCommand}" Content="Back" Width="200" Height="50" HorizontalAlignment="Center" BorderBrush="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Background="Transparent"/>
         </StackPanel>
     </Grid>
     

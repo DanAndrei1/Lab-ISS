@@ -2,6 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:AgentiVanzari.ViewModels"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         Width="640"
         Height="480"
@@ -10,7 +11,8 @@
         MaxWidth="640"
         MaxHeight="480"
         x:Class="AgentiVanzari.OrderWindow"
-        Title="Order">
+        Title="Order"
+        x:DataType="viewModels:OrderViewModel">
         
         <Grid>
                 <Grid.Background>
@@ -18,10 +20,12 @@
                 </Grid.Background>
         
                 <StackPanel Spacing="50" Background="Transparent">
-                        <TextBlock Text="Comanda" Foreground="White" Background="Transparent" FontFamily="Arial" FontSize="30"/>
-                        <TextBox Text="Nume" TextAlignment="Center" BorderBrush="White" Foreground="White" Background="Transparent" FontFamily="Arial" FontSize="30"/>
-                        <TextBox Text="Cantitate" TextAlignment="Center" BorderBrush="White" Foreground="White" Background="Transparent" FontFamily="Arial" FontSize="30"/>
-                        <Button Content="Comanda" Width="200" Height="50" HorizontalAlignment="Center" BorderBrush="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Background="Transparent"/>
+                        <TextBlock/>
+                        <TextBlock Text="Comanda" Foreground="White" Background="Transparent" FontFamily="Arial" FontSize="30" TextAlignment="Center"/>
+                        <TextBox Text="Nume" Width="200" Height="50" TextAlignment="Center" BorderBrush="White" Foreground="White" Background="Transparent" FontFamily="Arial" FontSize="30"/>
+                        <TextBox Text="Cantitate" Width="200" Height="50" TextAlignment="Center" BorderBrush="White" Foreground="White" Background="Transparent" FontFamily="Arial" FontSize="30"/>
+                        <Button Command="{Binding OrderCammand}" Content="Comanda" Width="200" Height="50" HorizontalAlignment="Center" BorderBrush="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Background="Transparent"/>
+                        <TextBlock Text="" FontFamily="Arial" Foreground="Red" Background="Transparent"/>
                 </StackPanel>
         </Grid>
         

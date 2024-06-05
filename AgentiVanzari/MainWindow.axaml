@@ -3,13 +3,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:viewModels="clr-namespace:AgentiVanzari.ViewModels"
+        x:DataType="viewModels:MainViewModel"
+        x:Class="AgentiVanzari.MainWindow"
         Width="640"
         Height="480"
         MinWidth="640"
         MinHeight="480"
         MaxWidth="640"
         MaxHeight="480"
-        x:Class="AgentiVanzari.MainWindow"
         Title="Agenti Vanzari">
         
         <Grid>
@@ -20,9 +22,9 @@
                 <StackPanel Spacing="50" Background="Transparent">
                         <TextBlock Text=""/>
                         <TextBlock Text="Agenti vanzari" TextAlignment="Center" Foreground="White" Background="Transparent" FontFamily="Arial" FontSize="30"/>
-                        <Button Content="Vizualizare stoc" Width="200" Height="50" HorizontalAlignment="Center" BorderBrush="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Background="Transparent"/>
-                        <Button Content="Comanda" Width="200" Height="50" HorizontalAlignment="Center" BorderBrush="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Background="Transparent"/>
-                        <Button Content="Logout" Width="200" Height="50" HorizontalAlignment="Center" BorderBrush="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Background="Transparent"/>
+                        <Button Content="Vizualizare stoc" Command="{Binding ViewProductsCommand}" Width="200" Height="50" HorizontalAlignment="Center" BorderBrush="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Background="Transparent"/>
+                        <Button Content="Comanda" Command="{Binding OrderProductCommand}" Width="200" Height="50" HorizontalAlignment="Center" BorderBrush="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Background="Transparent"/>
+                        <Button Content="Logout" Command="{Binding LogoutCommand}" Width="200" Height="50" HorizontalAlignment="Center" BorderBrush="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" Background="Transparent"/>
                 </StackPanel>
         </Grid>
 </Window>

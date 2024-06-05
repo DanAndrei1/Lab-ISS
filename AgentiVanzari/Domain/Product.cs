@@ -18,6 +18,15 @@ public class ProductContext : DbContext
 [Table("products")]
 public class Product
 {
+    public Product(int id, string name, int stock)
+    {
+        Id = id;
+        Name = name;
+        Stock = stock;
+    }
+    
+    public Product() { }
+    
     [Column("id")]
     public int Id { get; set; }
     

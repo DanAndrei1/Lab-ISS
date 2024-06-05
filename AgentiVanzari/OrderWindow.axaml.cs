@@ -1,4 +1,5 @@
-﻿using Avalonia;
+﻿using AgentiVanzari.ViewModels;
+using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
@@ -8,6 +9,12 @@ public partial class OrderWindow : Window
 {
     public OrderWindow()
     {
-        InitializeComponent();
+            DataContext = new OrderViewModel();
+            InitializeComponent();
+    }
+
+    private void InitializeComponent()
+    {
+        AvaloniaXamlLoader.Load(this);
     }
 }
